@@ -1,4 +1,4 @@
-@font-face
+﻿@font-face
 {
 font-family: "arcade_classic";
 src: url("font/arcade_baby/arcade_classic.ttf") format("truetype");
@@ -33,7 +33,60 @@ src: url("font/arcade_baby/emulogic.ttf") format("truetype");
 font-weight: normal;
 font-style: normal;
 }
+@font-face
+{
+font-family: "allstar4";
+src: url("font/arcade_baby/allstar4.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face
+{
+font-family: "postman";
+src: url("font/arcade_baby/postman.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face
+{
+font-family: "lowrider";
+src: url("font/arcade_baby/lowrider.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face
+{
+font-family: "death_star";
+src: url("font/arcade_baby/death_star.otf") format("opentype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face
+{
+font-family: "pt_sans";
+src: url("font/arcade_baby/pt_sans_r.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
 
+/*загружаем новый шрифт, кладем в нужную папку font/arcade_baby
+копируем новый блок выше
+@font-face
+{
+font-family: "name";
+src: url("font/arcade_baby/name.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+и вместо name пишем название файла и название шрифта, и это же название в стилях писать в font-family
+*** для otf прописать format("opentype") и расширение файла поменять
+названия шрифта лучше без пробела, и маленькими буквами сделать
+*/
+
+
+
+
+/*здесь по умолчанию стили, используются если для какого-то тега нет стилей*/
 * {
     font-family: 'retronoid';
     font-size: 26px;
@@ -42,120 +95,204 @@ font-style: normal;
 }
 
 body {
-    background: url(img/arcade_baby/back_main.png);
+    background: url(img/arcade_baby/back.jpg);   /*картинка фона страницы*/
+    background-size: 100%; /*растянули по размеру экрана*/
 }
 
-/*������ �� ��������*/
+/*секция со статьями, особо не надо менять */
 section:last-of-type {
 padding-left: 20px;
 padding-right: 20px;
-/*background: url(img/arcade_baby/back.jpg);*/
 }
 
+/*основное окно под всю статью*/
 article {
-    margin: 30px 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 80px;
-    font-weight: 100;
-    text-align: justify;
-    font-size: 16px;
-    background: #eeeeee;
-    background-image: radial-gradient(#3339b7 23%, transparent 0);
-  background-size: 8px 5px;
-  background-position: 0 0;
-
-  border: 4px solid #ffff00;
-  border-radius: 24px;
+    margin: 3% 12%; /* отступ окна статьи, по вертикали и горизонтали от краев браузера */
+    padding-left: 50px; /*оступ текста в статье от края окна, слева   */
+    padding-right: 50px;   /*справа  */
+    padding-top: 20px;   /* сверху*/
+    padding-bottom: 40px; /*снизу */
+    text-align: justify; /* тип выравнивания текста в статье, justify - на всю ширину */
+    font-size: 16px;    /*размер шрифта тут, если явно не указан в других тегах */
+    background: #000000;
+    background-image: radial-gradient(#222222 50%, transparent 0);  /*фон кружков, код цвета*/
+  background-size: 10px 10px; /*размер кружков фона*/
+  border: 16px solid #000000; /* рамка окна статей     размер, тип solid - сплошная линия, цвет */
+  border-radius: 24px; /* закругление рамки окна статей   */
   }
 
+/*каждая секция, или абзац*/
 article section  {
 margin-top: 20px;
 margin-bottom: 20px;
 padding: 20px;
-border: 4px solid #3339b7;
-border-radius: 24px;
+/*border: 4px solid #3339b7;
+border-radius: 24px;*/
 font-family: 'retronoid';
-background: #ffffff;
+/*background: #ffffff; */
 }
+
 article section:nth-of-type(1) {
 background: none;
 border:none;
 }
 
-
+/*текста статей в зависимости от номера абзаца, четный и нечетный параграфы*/
 section p:nth-of-type(odd) {
-    font-size:14px;
-    line-height: 20px;
-    color:#C71585;
+    font-size:28px;
+    line-height: 28px;   /*межстрочный интервал  */
+    color:#ffffff;
 }
 
 section p:nth-of-type(even) {
-    font-size:13px;
-    line-height: 20px;
-    color:#00a;
+    font-size:28px;
+    line-height: 28px;   /*межстрочный интервал  */
+    color:#ffffff;
 }
 
+/*стиль самого первого абзаца*/
 section p:nth-of-type(1) {
-    font-size:15px;
-    line-height: 22px;
-    color:#008B8B;
+    font-size:28px;
+    line-height: 28px;    /*межстрочный интервал  */
+    color:#ffffff;
 }
 
+/*первая буква в абзацах*/
 section p:first-letter{
-    font-size:26px;
-    line-height: 22px;
+    color:#ffffff;
+    font-size:32px;     /*межстрочный интервал  */
+    line-height: 28px;
 }
 
+/*текст всех статей*/
 p {
-font-family: 'emulogic';
+font-family: 'pt_sans';
 }
 
+/*тег цитат*/
+q {
+display: block;
+font-family: 'death_star';
+color:#E6E6FA;
+font-size:22px;
+}
+
+/*выделенный текст*/
+p strong, em {
+font-family: 'death_star';
+color:#E6E6FA;
+font-size:22px;
+}
+
+/*выделенный курсив*/
+p i {
+font-family: 'death_star';
+font-style: italic;
+color:#E6E6FA;
+font-size:22px;
+}
+
+/*текст ссылки в статье*/
+p a {
+font-family: 'death_star';
+font-size: 17px;
+color:#E6E6FA;
+text-decoration: underline;
+}
+
+/*заголовки*/
 h1, h2, h3, h4 {
     display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 h1 {
 font-size: 36px;
-line-height: 50px;
-color:#333;
-font-family: 'games';
+line-height: 50px; /*межстрочный интервал*/
+color:#E6E6FA;
+font-family: 'death_star';
 }
 h2 {
 font-size: 36px;
 line-height: 46px;
-color:#333;
-font-family: 'games';
+color:#E6E6FA;
+font-family: 'death_star';
 }
 h3 {
-font-size: 30px;
+font-size: 34px;
 line-height: 36px;
-color:#555;
-font-family: 'retronoid';
+color:#7B68EE;
+font-family: 'lowrider';
+font-style: italic;
 }
 h4 {
-font-size: 28px;
-line-height: 32px;
-color:#666;
-font-family: 'retronoid';
+font-size: 34px;
+line-height: 34px;
+color:#E6E6FA;
+font-family: 'lowrider';
+font-style: italic;
 }
 
+/*фотографии*/
 article img {
-    max-width: 90%;
+    max-width: 80%;  /*ширина от размера окна*/
     height: auto;
-    display: block;
-    margin: 0 auto;
+    display: block;  /*надо задавать фото блоком, чтобы отступы можно было делать */
+    margin: 0 auto;   /*выравание по горизонтали по центру   0 - по вертикали отступ, auto по горзонтали отступ слева и справа, auto значит одинаковый, поэтому по центру получается  */
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 4px solid #00c;
-    border-radius: 6px;
+    /*border: 8px solid #ffffff;*/ /*рамка фото */
+    border: 15px double #0000aa; /*рамка фото  double двойная, отступ и размер вместе задается*/
+    border-radius: 12px;
 }
 
+/*обычно подпись под картинкой*/
 figcaption {
 margin-bottom: 30px;
 font-size: 20px;
-color:#333;
-font-family: 'games';
+color:#7B68EE;
+font-family: 'lowrider';
+font-style: italic;
 text-align: center;
 }
 
+/*таблица*/
+table {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+/*чередуем фон таблицы по четностистрок*/
+table tr:nth-of-type(odd) {
+  background: #333333;
+  }
+
+table tr:nth-of-type(even) {
+  background: #999999;
+  }
+
+/*заголовок таблицы*/
+table th {
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+font-family: 'games';
+font-size: 30px;
+color:#00cccc;
+}
+/*ячейки таблицы*/
+table td {
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+font-family: 'emulogic';
+font-size: 18px;
+color:#ffffff;
+}
+
+/*общий стиль временной линии*/
+#timeline {
+  opacity:0.8; /*прозрачность от общего цвета*/
+}
