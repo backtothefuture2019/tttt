@@ -461,7 +461,7 @@ margin: auto;
   margin-left: 622px;
   margin-top: 100px;
   margin-bottom: 90px;
- /* display: inline-block;*/
+  display: inline-block;
   font-family: 'Exo 2', sans-serif;
   font-size: 11pt;
   letter-spacing: .06em;
@@ -578,24 +578,28 @@ img {
     -webkit-transform: scale(0.97);
     -ms-transform: scale(0.97);
     transform: scale(0.97) rotate(-7deg);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   25% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1) rotate(-7deg);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   60% {
     -webkit-transform: scale(0.97);
     -ms-transform: scale(0.97);
     transform: scale(0.97) rotate(-7deg);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   100% {
     -webkit-transform: scale(0.97);
     -ms-transform: scale(0.97);
     transform: scale(0.97) rotate(-7deg);
+	cursor: url("img/future/finger.png"), auto;
   }
 }
 
@@ -605,24 +609,28 @@ img {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   25% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   60% {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+	cursor: url("img/future/finger.png"), auto;
   }
 
   100% {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+	cursor: url("img/future/finger.png"), auto;
   }
 }
 
