@@ -5,6 +5,12 @@
 <title>Lord of the Rings theme</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Reference for Ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!-- Reference for jQuery -->  
+  <script src="jquery-3.4.1.min.js"></script>
+  
 <style>
 @font-face {
     font-family: 'elvish';
@@ -13,15 +19,19 @@
 
 body {
 font-family: 'elvish';
-        background: url(sauron.png);
+        background-image: url(sauron.png);
         background-repeat: no-repeat;
-}
+        background-position: center bottom;
 
-.move-area{/*normally use body*/
   width: 100vw;
   height: 100vh;
   padding: 10% 45%;
 }
+
+p {
+font-family: 'elvish';
+}
+
 .container {
   width: 100%;
 }
@@ -31,7 +41,7 @@ font-family: 'elvish';
   border-radius: 50%;
   height: 30px;
   width: 30px;
-  background: #CCC;
+  background: #e0190b;
 }
 .eye:after { /*pupil*/
   position: absolute;
@@ -70,12 +80,11 @@ $(".move-area").mousemove(function(event) {
 </audio>
 
 
-<section class="move-area">
+
   <div class='.container'>
 
     <div class='eye'></div>
   </div>
-</section>
 
 
 
@@ -84,10 +93,11 @@ $(".move-area").mousemove(function(event) {
 
 
 
-<div id="board">  
-  <div id="content">
-    <p id="title">Episode V</p>
-    <p id="subtitle">THE EMPIRE STRIKES BACK</p>
+
+<div>  
+  <div>
+    <p>Episode V</p>
+    <p>THE EMPIRE STRIKES BACK</p>
     <br>
     <p>It is a dark time for the
 Rebellion. Although the Lorem
